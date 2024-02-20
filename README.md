@@ -9,7 +9,7 @@ when it is requested.
 This plugin adds the following WP CLI command to generate and cache the root
 sitemap:
 
-	wp yoast-sitemap-build-root
+	wp yoast-sitemap-build-sitemaps
 
 This will generate the root sitemap and store it as a vanilla XML file in the
 uploads directory. This will be automatically served when you hit the root 
@@ -19,4 +19,4 @@ sitemap index defined by Yoast. I.e. https://yoursite.com/sitemap_index.xml.
 
 This command should be configured to run via a cron every 10 mins or so, like so:
 
-	*/10 * * * * cd /srv/www/mysite/current && wp yoast-sitemap-build-root --url="https://yoursite.com" 2>&1 2>/dev/null
+	*/10 * * * * cd /srv/www/mysite/current && wp yoast-sitemap-build-sitemaps --url="https://yoursite.com" 2>&1 2>/dev/null
